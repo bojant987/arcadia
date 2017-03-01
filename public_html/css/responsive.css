@@ -1,10 +1,75 @@
-/*
-    Created on : Dec 6, 2016, 8:27:06 PM
-    Author     : Bojan
-*/
+@media (min-width: 768px) {
+    /* ---- global styles ---- */
+    /* ---- upper header styles ---- */
+    .upper-header ul {
+        float: right;
+        text-align: left;
+    }
+    /* ---- lower header styles ---- */
+    .lower-header .search {
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .lower-header .shopping-cart {
+        text-align: right;
+    }
+    .lower-header .shopping-cart .buttons {
+        margin: 0 0 10px;
+        display: inline-block;
+    }
+    .lower-header .shopping-cart .custom-select {
+        display: inline-block;
+    }
+    .lower-header .logo {
+        width: 170px;
+        display: inline-block;
+    }
+    /* ---- main nav styles ---- */
+    .navbar-default .navbar-brand {
+        display: none;
+    }
+    .navbar-default .navbar-collapse {
+        margin-top: 0;
+        text-align: center;
+    }
+    .navbar-default .navbar-collapse .navbar-nav {
+        float: none;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    .navbar-default .navbar-collapse .navbar-nav li {
+        margin-right: 60px;
+    }
+    .navbar-default .navbar-collapse .navbar-nav li:last-of-type {
+        margin-right: 0;
+    }
+}
 
-@media (min-width: 768px) {}
+@media (min-width: 992px) {
+    /* ---- global styles ---- */
+    /* ---- upper header styles ---- */
+    /* ---- lower header styles ---- */
+    .lower-header .shopping-cart .custom-select {
+        transform: translateX(4px);
+    }
+    .lower-header .shopping-cart .buttons {
+        vertical-align: top;
+    }
+    .lower-header .shopping-cart .select-dropdown {
+        left: 4px;
+    }
+    .lower-header .shopping-cart .custom-select {
+        margin: 0;
+    }
+    .lower-header .logo {
+        width: auto;
+    }
+    /* ---- main nav styles ---- */
+}
 
-@media (min-width: 992px) {}
-
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    /* ---- global styles ---- */
+    /* ---- upper header styles ---- */
+    /* ---- lower header styles ---- */
+    /* ---- main nav styles ---- */
+}

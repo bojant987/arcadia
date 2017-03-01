@@ -1,4 +1,223 @@
-/*
-    Created on : Dec 6, 2016, 8:26:58 PM
-    Author     : Bojan
-*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&subset=latin-ext');
+
+/* ---- global styles ---- */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ---- upper header styles ---- */
+
+.upper-header {
+    background-color: #7f401b;
+}
+
+.upper-header ul {
+    display: block;
+    margin: 0 auto;
+    padding: 3px 0;
+    text-align: center;
+}
+
+.upper-header ul li:first-of-type {
+    padding-right: 15px;
+    border-right: 1px solid #a97f66;
+}
+
+.upper-header ul li a {
+    display: inline-block;
+    color: #fff;
+    font-size: 10px;
+    line-height: 22px;
+}
+
+
+/* ---- lower header styles ---- */
+
+.lower-header {
+    padding: 24px 0 80px;
+    position: relative;
+}
+
+.lower-header .search {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lower-header .search input {
+    height: 37px;
+    vertical-align: top;
+    border: 1px solid #7f401b;
+    padding: 0 10px;
+}
+
+.lower-header .search button {
+    width: 37px;
+    height: 37px;
+    border: none;
+    background-color: #7f401b;
+    transform: translateX(-4px);
+    transition: 0.6s;
+}
+
+.lower-header .search button:hover {
+    background-color: #fff;
+    border: 1px solid #7f401b;
+    /*border-left: none;*/
+}
+
+.lower-header .search button .fa {
+    color: #fff;
+    font-size: 20px;
+    line-height: 37px;
+}
+
+.lower-header .search button:hover .fa {
+    color: #7f401b;
+    transition: 0.6s;
+}
+
+.lower-header .shopping-cart {
+    text-align: center;
+}
+
+.lower-header .shopping-cart .order {
+    display: none;
+}
+
+.lower-header .shopping-cart .visible-select {
+    display: inline-block;
+    position: relative;
+}
+
+.lower-header .shopping-cart .custom-select {
+    text-align: left;
+    margin: 0 auto 10px;
+    height: 37px;
+    width: 192px;
+    border: 1px solid #7f401b;
+    padding: 0 10px;
+    line-height: 37px;
+    background: url(assets/select-icon.png) 94% center no-repeat;
+    font-size: 12px;
+    font-weight: 500;
+    color: #7f401b;
+    cursor: pointer;
+}
+
+.lower-header .shopping-cart .select-dropdown {
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #7f401b;
+    border: 1px solid #7f401b;
+    border-radius: 0 0 5px 5px;
+}
+
+.lower-header .shopping-cart .select-dropdown li {
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.lower-header .shopping-cart .select-dropdown li:hover {
+    background-color: #fff;
+    color: #7f401b;
+}
+
+.lower-header .shopping-cart .button {
+    display: inline-block;
+    height: 37px;
+    line-height: 37px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.lower-header .shopping-cart .shop-btn {
+    padding: 0 25px;
+    background-color: #7f401b;
+}
+
+.lower-header .shopping-cart .cart-btn {
+    padding: 0 15px;
+    background-color: #ec1c24;
+    transform: translateX(-4px);
+}
+
+.lower-header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+
+/* ---- main nav styles ---- */
+
+.navbar-default {
+    margin-bottom: 0;
+    background-color: #fff;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-default .navbar-brand {
+    padding-top: 0;
+}
+
+.navbar-default .navbar-brand img {
+    width: 180px;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #7f401b;
+    background-color: #7f401b;
+    transition: 0.6s;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+    transition: 0.6s;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar {
+    background-color: #7f401b;
+}
+
+.navbar-default .navbar-collapse {
+    margin-top: 20px;
+    text-align: center;
+    border-color: #7f401b;
+}
+
+.navbar-default .navbar-collapse li a {
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #7f401b;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #7f401b;
+    background-color: transparent;
+}
+
+
+/* ---- login modal styles ---- */
+
+.login-modal .modal-lg {
+    width: 100%;
+}

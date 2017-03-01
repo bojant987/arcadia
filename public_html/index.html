@@ -23,10 +23,111 @@
     <![endif]-->
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="upper-header clearfix">
+        <div class="container">
+          <ul class="list-inline">
+            <li><a href="#" data-toggle="modal" data-target=".login-modal">Prijava</a></li>
+            <li><a href="#">Zahtev za registraciju</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lower-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-5">
+              <div class="search">
+                <input type="search" placeholder="Pretraga">
+                <button type="button" name="button"><span class="fa fa-search"></span></button>
+              </div>
+            </div>
+            <div class="col-md-5 col-md-offset-3 col-sm-5 col-sm-offset-2">
+              <div class="shopping-cart">
+                <select class="order" name="order">
+                  <option value="01-01-2017">Narudzbina za 01.01.2017.</option>
+                  <option value="01-02-2017">Narudzbina za 01.02.2017.</option>
+                  <option value="01-03-2017">Narudzbina za 01.03.2017.</option>
+                  <option value="01-04-2017">Narudzbina za 01.04.2017.</option>
+                  <option value="01-05-2017">Narudzbina za 01.05.2017.</option>
+                </select>
+                <div class="visible-select">
+                  <p class="custom-select">Narudzbina za 01.01.2017.</p>
+                  <ul class="select-dropdown list-unstyled">
+                    <li data-value="01-01-2017">Narudzbina za 01.01.2017.</li>
+                    <li data-value="01-02-2017">Narudzbina za 01.02.2017.</li>
+                    <li data-value="01-03-2017">Narudzbina za 01.03.2017.</li>
+                    <li data-value="01-04-2017">Narudzbina za 01.04.2017.</li>
+                    <li data-value="01-05-2017">Narudzbina za 01.05.2017.</li>
+                  </ul>
+                </div>
+                <div class="buttons">
+                  <a href="#" class="text-uppercase shop-btn button">shop</a>
+                  <a href="#" class="text-uppercase cart-btn button">cart<span>(0)</span></a>
+                </div>
+              </div>
+            </div>
+            <img src="img/logo.png" alt="logo" class="logo">
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="">
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav text-uppercase">
+            <li class="active"><a href="#">naslovna <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">proizvodi</a></li>
+            <li><a href="#">o nama</a></li>
+            <li><a href="#">kontakt</a></li>
+          </ul>
+        </div><!-- navbar-collapse -->
+      </div><!-- container -->
+    </nav>
     <main></main>
     <footer></footer>
-
+    <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <form class="login">
+                  <h2 class="text-uppercase">prijava</h2>
+                  <p>Molimo Vas da uneste svoj e/mail i password</p>
+                  <input type="text" name="" value="">
+                  <input type="password" name="" value="">
+                  <a href="#">Zaboravili ste šifru?</a>
+                  <label>
+                    <input type="checkbox" name="" value="">Zapamti
+                  </label>
+                  <button type="submit" class="text-uppercase">prijavi se</button>
+                </form>
+              </div>   <!-- col -->
+              <div class="col-md-6">
+                <h2 class="text-uppercase">registracija</h2>
+                <p>Molimo Vas da uneste svoj e/mail i password</p>
+                <a href="#" class="text-uppercase">registruj se</a>
+              </div>   <!-- col -->
+            </div>      <!-- row -->
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
