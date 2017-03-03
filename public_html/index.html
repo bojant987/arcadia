@@ -1,137 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="author" content="Bojan Todorovic">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="author" content="Bojan Todorovic">
 
-    <title>Arcadia</title>
+        <title>Arcadia</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <header>
-      <div class="upper-header clearfix">
-        <div class="container">
-          <ul class="list-inline">
-            <li><a href="#" data-toggle="modal" data-target=".login-modal">Prijava</a></li>
-            <li><a href="#">Zahtev za registraciju</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="lower-header">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 col-sm-5">
-              <div class="search">
-                <input type="search" placeholder="Pretraga">
-                <button type="button" name="button"><span class="fa fa-search"></span></button>
-              </div>
-            </div>
-            <div class="col-md-5 col-md-offset-3 col-sm-5 col-sm-offset-2">
-              <div class="shopping-cart">
-                <select class="order" name="order">
-                  <option value="01-01-2017">Narudzbina za 01.01.2017.</option>
-                  <option value="01-02-2017">Narudzbina za 01.02.2017.</option>
-                  <option value="01-03-2017">Narudzbina za 01.03.2017.</option>
-                  <option value="01-04-2017">Narudzbina za 01.04.2017.</option>
-                  <option value="01-05-2017">Narudzbina za 01.05.2017.</option>
-                </select>
-                <div class="visible-select">
-                  <p class="custom-select">Narudzbina za 01.01.2017.</p>
-                  <ul class="select-dropdown list-unstyled">
-                    <li data-value="01-01-2017">Narudzbina za 01.01.2017.</li>
-                    <li data-value="01-02-2017">Narudzbina za 01.02.2017.</li>
-                    <li data-value="01-03-2017">Narudzbina za 01.03.2017.</li>
-                    <li data-value="01-04-2017">Narudzbina za 01.04.2017.</li>
-                    <li data-value="01-05-2017">Narudzbina za 01.05.2017.</li>
-                  </ul>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <header>
+            <div class="upper-header clearfix">
+                <div class="container">
+                    <ul class="list-inline">
+                        <li><a href="#" data-toggle="modal" data-target=".login-modal">Prijava</a></li>
+                        <li><a href="#" data-toggle="modal" data-target=".register-modal">Zahtev za registraciju</a></li>
+                    </ul>
                 </div>
-                <div class="buttons">
-                  <a href="#" class="text-uppercase shop-btn button">shop</a>
-                  <a href="#" class="text-uppercase cart-btn button">cart<span>(0)</span></a>
-                </div>
-              </div>
             </div>
-            <img src="img/logo.png" alt="logo" class="logo">
-          </div>
-        </div>
-      </div>
-    </header>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-            <img src="img/logo.png" alt="">
-          </a>
-        </div>
+            <div class="lower-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-5">
+                            <div class="search">
+                                <input type="search" placeholder="Pretraga">
+                                <button type="button" name="button"><span class="fa fa-search"></span></button>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-3 col-sm-5 col-sm-offset-2">
+                            <div class="shopping-cart">
+                                <select class="order" name="order">
+                                    <option value="01-01-2017">Narudzbina za 01.01.2017.</option>
+                                    <option value="01-02-2017">Narudzbina za 01.02.2017.</option>
+                                    <option value="01-03-2017">Narudzbina za 01.03.2017.</option>
+                                    <option value="01-04-2017">Narudzbina za 01.04.2017.</option>
+                                    <option value="01-05-2017">Narudzbina za 01.05.2017.</option>
+                                </select>
+                                <div class="visible-select">
+                                    <p class="custom-select">Narudzbina za 01.01.2017.</p>
+                                    <ul class="select-dropdown list-unstyled">
+                                        <li data-value="01-01-2017">Narudzbina za 01.01.2017.</li>
+                                        <li data-value="01-02-2017">Narudzbina za 01.02.2017.</li>
+                                        <li data-value="01-03-2017">Narudzbina za 01.03.2017.</li>
+                                        <li data-value="01-04-2017">Narudzbina za 01.04.2017.</li>
+                                        <li data-value="01-05-2017">Narudzbina za 01.05.2017.</li>
+                                    </ul>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="text-uppercase shop-btn button">shop</a>
+                                    <a href="#" class="text-uppercase cart-btn button">cart<span>(0)</span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="img/logo.png" alt="logo" class="logo">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav text-uppercase">
-            <li class="active"><a href="#">naslovna <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">proizvodi</a></li>
-            <li><a href="#">o nama</a></li>
-            <li><a href="#">kontakt</a></li>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav text-uppercase">
+                        <li class="active"><a href="#">naslovna <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">proizvodi</a></li>
+                        <li><a href="#">o nama</a></li>
+                        <li><a href="#">kontakt</a></li>
+                    </ul>
+                </div><!-- navbar-collapse -->
+            </div><!-- container -->
+        </nav>
+        <main>
+            <section class="product-banner" style="background: #fffefa">
+                <div class="container">
+                    <figure class="banner" style="background: #fffefa">
+                        <img src="img/banner.jpg" alt="banner">
+                    </figure>
+                    <button class="product-nav-collapse"><span class="fa fa-cogs"></span></button>
+                    <nav class="product-nav">
+                        <ul class="product-menu list-unstyled">
+                            <li class="text-uppercase" data-open="alcohol"><img src="img/alcohol-icon.png" alt="alcohol">Alkoholna pića</li>
+                            <li class="text-uppercase" data-open="coffee"><img src="img/coffee-icon.png" alt="coffee">Čajevi, kafe i hrana</li>
+                            <li class="text-uppercase" data-open="beer"><img src="img/beer-icon.png" alt="beer">Piva, cideri i breezeri</li>
+                            <li class="text-uppercase" data-open="champagne"><img src="img/champagne-icon.png" alt="champagne">Šampanjci</li>
+                            <li class="text-uppercase" data-open="juice"><img src="img/juice-icon.png" alt="juice">Sokovi</li>
+                            <li class="text-uppercase" data-open="material"><img src="img/material-icon.png" alt="material">Ugostiteljski materijal</li>
+                            <li class="text-uppercase" data-open="wine"><img src="img/wine-icon.png" alt="wine">Vina</li>
+                            <li class="text-uppercase" data-open="water"><img src="img/water-icon.png" alt="water">Vode</li>
+                            <li class="text-uppercase" data-open="syrup"><img src="img/syrup-icon.png" alt="syrup">Sirupi</li>
+                        </ul>
+                        <ul class="product-submenu list-unstyled" id="alcohol">
+                            <li><img src="img/alcohol-icon-hover.png" alt="alcohol"></li>
+                            <li class="text-uppercase">absinth</li>
+                            <li class="text-uppercase">bitteri</li>
+                            <li class="text-uppercase">brandy</li>
+                            <li class="text-uppercase">burboni</li>
+                            <li class="text-uppercase">džin</li>
+                            <li class="text-uppercase">konjak</li>
+                            <li class="text-uppercase">likeri</li>
+                            <li class="text-uppercase">rakije</li>
+                            <li class="text-uppercase">rum</li>
+                            <li class="text-uppercase">tequila</li>
+                            <li class="text-uppercase">vermut</li>
+                            <li class="text-uppercase">vodka</li>
+                            <li class="text-uppercase">whiskey</li>
+                        </ul>
+                        <ul class="product-submenu list-unstyled" id="coffee">
+                            <li><img src="img/coffee-icon-hover.png" alt="alcohol"></li>
+                            <li class="text-uppercase">absinth</li>
+                            <li class="text-uppercase">bitteri</li>
+                            <li class="text-uppercase">brandy</li>
+                            <li class="text-uppercase">burboni</li>
+                            <li class="text-uppercase">džin</li>
+                            <li class="text-uppercase">konjak</li>
+                            <li class="text-uppercase">likeri</li>
+                            <li class="text-uppercase">rakije</li>
+                            <li class="text-uppercase">rum</li>
+                            <li class="text-uppercase">tequila</li>
+                            <li class="text-uppercase">vermut</li>
+                            <li class="text-uppercase">vodka</li>
+                            <li class="text-uppercase">whiskey</li>
+                        </ul>
+                        <ul class="product-submenu list-unstyled" id="beer">
+                            <li><img src="img/beer-icon-hover.png" alt="alcohol"></li>
+                            <li class="text-uppercase">absinth</li>
+                            <li class="text-uppercase">bitteri</li>
+                            <li class="text-uppercase">brandy</li>
+                            <li class="text-uppercase">burboni</li>
+                            <li class="text-uppercase">džin</li>
+                            <li class="text-uppercase">konjak</li>
+                            <li class="text-uppercase">likeri</li>
+                            <li class="text-uppercase">rakije</li>
+                            <li class="text-uppercase">rum</li>
+                            <li class="text-uppercase">tequila</li>
+                            <li class="text-uppercase">vermut</li>
+                            <li class="text-uppercase">vodka</li>
+                            <li class="text-uppercase">whiskey</li>
+                        </ul>
+                        <ul class="product-submenu list-unstyled" id="champagne">
+                            <li><img src="img/champagne-icon-hover.png" alt="alcohol"></li>
+                            <li class="text-uppercase">absinth</li>
+                            <li class="text-uppercase">bitteri</li>
+                            <li class="text-uppercase">brandy</li>
+                            <li class="text-uppercase">burboni</li>
+                            <li class="text-uppercase">džin</li>
+                            <li class="text-uppercase">konjak</li>
+                            <li class="text-uppercase">likeri</li>
+                            <li class="text-uppercase">rakije</li>
+                            <li class="text-uppercase">rum</li>
+                            <li class="text-uppercase">tequila</li>
+                            <li class="text-uppercase">vermut</li>
+                            <li class="text-uppercase">vodka</li>
+                            <li class="text-uppercase">whiskey</li>
+                        </ul>
+                        <ul class="product-submenu list-unstyled" id="juice">
+                            <li><img src="img/juice-icon-hover.png" alt="alcohol"></li>
+                            <li class="text-uppercase">absinth</li>
+                            <li class="text-uppercase">bitteri</li>
+                            <li class="text-uppercase">brandy</li>
+                            <li class="text-uppercase">burboni</li>
+                            <li class="text-uppercase">džin</li>
+                            <li class="text-uppercase">konjak</li>
+                            <li class="text-uppercase">likeri</li>
+                            <li class="text-uppercase">rakije</li>
+                            <li class="text-uppercase">rum</li>
+                            <li class="text-uppercase">tequila</li>
+                            <li class="text-uppercase">vermut</li>
+                            <li class="text-uppercase">vodka</li>
+                            <li class="text-uppercase">whiskey</li>
+                        </ul>
+                        <ul class="product-submenu list-unstyled" id="material">
+                            <li><img src="img/material-icon-hover.png" alt="alcohol"></li>
+                            <li class="text-uppercase">absinth</li>
+                            <li class="text-uppercase">bitteri</li>
+                            <li class="text-uppercase">brandy</li>
+                            <li class="text-uppercase">burboni</li>
+                            <li class="text-uppercase">džin</li>
+                            <li class="text-uppercase">konjak</li>
+                            <li class="text-uppercase">likeri</li>
+                            <li class="text-uppercase">rakije</li>
+                            <li class="text-uppercase">rum</li>
+                            <li class="text-uppercase">tequila</li>
+                            <li class="text-uppercase">vermut</li>
+                            <li class="text-uppercase">vodka</li>
+                            <li class="text-uppercase">whiskey</li>
+                        </ul>
+                        <ul class="product-submenu list-unstyled" id="wine">
+                            <li><img src="img/wine-icon-hover.png" alt="alcohol"></li>
+                            <li class="text-uppercase">absinth</li>
+                            <li class="text-uppercase">bitteri</li>
+                            <li class="text-uppercase">brandy</li>
+                            <li class="text-uppercase">burboni</li>
+                            <li class="text-uppercase">džin</li>
+                            <li class="text-uppercase">konjak</li>
+                            <li class="text-uppercase">likeri</li>
+                            <li class="text-uppercase">rakije</li>
+                            <li class="text-uppercase">rum</li>
+                            <li class="text-uppercase">tequila</li>
+                            <li class="text-uppercase">vermut</li>
+                            <li class="text-uppercase">vodka</li>
+                            <li class="text-uppercase">whiskey</li>
+                        </ul>
+                        <ul class="product-submenu list-unstyled" id="water">
+                            <li><img src="img/water-icon-hover.png" alt="alcohol"></li>
+                            <li class="text-uppercase">absinth</li>
+                            <li class="text-uppercase">bitteri</li>
+                            <li class="text-uppercase">brandy</li>
+                            <li class="text-uppercase">burboni</li>
+                            <li class="text-uppercase">džin</li>
+                            <li class="text-uppercase">konjak</li>
+                            <li class="text-uppercase">likeri</li>
+                            <li class="text-uppercase">rakije</li>
+                            <li class="text-uppercase">rum</li>
+                            <li class="text-uppercase">tequila</li>
+                            <li class="text-uppercase">vermut</li>
+                            <li class="text-uppercase">vodka</li>
+                            <li class="text-uppercase">whiskey</li>
+                        </ul>
+                        <ul class="product-submenu list-unstyled" id="syrup">
+                            <li><img src="img/syrup-icon-hover.png" alt="alcohol"></li>
+                            <li class="text-uppercase">absinth</li>
+                            <li class="text-uppercase">bitteri</li>
+                            <li class="text-uppercase">brandy</li>
+                            <li class="text-uppercase">burboni</li>
+                            <li class="text-uppercase">džin</li>
+                            <li class="text-uppercase">konjak</li>
+                            <li class="text-uppercase">likeri</li>
+                            <li class="text-uppercase">rakije</li>
+                            <li class="text-uppercase">rum</li>
+                            <li class="text-uppercase">tequila</li>
+                            <li class="text-uppercase">vermut</li>
+                            <li class="text-uppercase">vodka</li>
+                            <li class="text-uppercase">whiskey</li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>    <!-- product banner -->
+            <section class="on-sale text-center">
+                <div class="container">
+                    <h1 class="text-uppercase">akcija</h1>
+                    <p>Lorem Ipsum is simply dummy text of <span>10%</span> industry.</p>
+                    <div class="products">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                            <div class="col-sm-4 col-md-3 col-lg-5ths">
+                                <article class="product">
+                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left product-price">
+                                            <p>Sa PDV-om</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                        <div class="col-xs-6 text-right product-price">
+                                            <p>Bez PDV-a</p>
+                                            <p>2345.89</p>
+                                        </div>
+                                    </div>
+                                    <figure>
+                                        <img src="img/product.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name">Absolut 100 0.7 L</p>
+                                    <a href="#" class="text-uppercase add-to-cart">dodaj u korpu <span class="fa fa-plus"></span></a>
+                                </article>
+                            </div>  <!-- col -->
+                        </div>      <!-- row -->
+                    </div>    <!-- products -->
+                    <button class="show-all button text-uppercase">pogledaj sve</button>
+                </div>    <!-- container -->
+            </section>    <!-- on sale -->
+            <section class="partners text-center">
+                <div class="container">
+                    <h1 class="text-uppercase">prijatelji</h1>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <figure>
+                                <img src="img/partners-01.png" alt="">
+                            </figure>
+                        </div>   <!-- col -->
+                        <div class="col-sm-6 col-md-3">
+                            <figure>
+                                <img src="img/partners-02.png" alt="">
+                            </figure>
+                        </div>   <!-- col -->
+                        <div class="col-sm-6 col-md-3">
+                            <figure>
+                                <img src="img/partners-03.png" alt="">
+                            </figure>
+                        </div>   <!-- col -->
+                        <div class="col-sm-6 col-md-3">
+                            <figure>
+                                <img src="img/partners-04.png" alt="">
+                            </figure>
+                        </div>   <!-- col -->
+                        <div class="col-sm-6 col-md-3">
+                            <figure>
+                                <img src="img/partners-05.png" alt="">
+                            </figure>
+                        </div>   <!-- col -->
+                        <div class="col-sm-6 col-md-3">
+                            <figure>
+                                <img src="img/partners-06.png" alt="">
+                            </figure>
+                        </div>   <!-- col -->
+                        <div class="col-sm-6 col-md-3">
+                            <figure>
+                                <img src="img/partners-07.png" alt="">
+                            </figure>
+                        </div>   <!-- col -->
+                        <div class="col-sm-6 col-md-3">
+                            <figure>
+                                <img src="img/partners-08.png" alt="">
+                            </figure>
+                        </div>   <!-- col -->
+                    </div>    <!-- row -->
+                </div>    <!-- container -->
+            </section>      <!-- partners -->
+        </main>
+        <footer class="text-center" style="background: #333">
+          <ul class="footer-info list-unstyled">
+            <li>Arcadia Team d.o.o.</li>
+            <li>Autoput 20, 11080 Zemun</li>
+            <li>
+              <p><span>011 269 2605</span><span>063 106 7009</span></p>
+            </li>
+            <li><a href="mailto:arcadia@distribucija.com">arcadia@distribucija.com</a></li>
           </ul>
-        </div><!-- navbar-collapse -->
-      </div><!-- container -->
-    </nav>
-    <main></main>
-    <footer></footer>
-    <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-                <form class="login">
-                  <h2 class="text-uppercase">prijava</h2>
-                  <p>Molimo Vas da uneste svoj e/mail i password</p>
-                  <input type="text" name="" value="">
-                  <input type="password" name="" value="">
-                  <a href="#">Zaboravili ste šifru?</a>
-                  <label>
-                    <input type="checkbox" name="" value="">Zapamti
-                  </label>
-                  <button type="submit" class="text-uppercase">prijavi se</button>
-                </form>
-              </div>   <!-- col -->
-              <div class="col-md-6">
-                <h2 class="text-uppercase">registracija</h2>
-                <p>Molimo Vas da uneste svoj e/mail i password</p>
-                <a href="#" class="text-uppercase">registruj se</a>
-              </div>   <!-- col -->
-            </div>      <!-- row -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+          <ul class="social list-inline">
+            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+            <li><a href="#"><span class="fa fa-rss"></span></a></li>
+          </ul>
+        </footer>
+        <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modal">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-5">
+                                <form class="login">
+                                    <h2 class="text-uppercase">prijava</h2>
+                                    <p>Molimo Vas da uneste svoj e/mail i password</p>
+                                    <input type="email" name="email" value="" class="form-control" placeholder="EMAIL*">
+                                    <input type="password" name="password" value="" class="form-control" placeholder="PASSWORD*">
+                                    <p class="login-error error">*Email ili password netačni</p>
+                                    <div class="row">
+                                        <div class="col-xs-6 text-left">
+                                            <a href="#" class="forgotten-password">Zaboravili ste šifru?</a>
+                                        </div>
+                                        <div class="col-xs-6 text-right">
+                                            <input type="checkbox" name="remember" id="remember" value="">
+                                            <label for="remember">Zapamti</label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="text-uppercase login-btn button">prijavi se</button>
+                                </form>
+                            </div>   <!-- col -->
+                            <div class="col-sm-6 col-md-5 col-md-offset-2">
+                                <div class="register">
+                                    <h2 class="text-uppercase">registracija</h2>
+                                    <p>Molimo Vas da uneste svoj e/mail i password</p>
+                                    <button class="text-uppercase register-btn button">registruj se</button>
+                                </div>
+                            </div>   <!-- col -->
+                        </div>      <!-- row -->
+                    </div>
+                </div>
+            </div>
+        </div>  <!-- modal -->
+        <div class="modal fade register-modal" tabindex="-1" role="dialog" aria-labelledby="register-modal">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <form class="register">
+                                    <h2 class="text-uppercase">registracija</h2>
+                                    <p>Molimo Vas da uneste svoj e/mail i password</p>
+                                    <input type="text" name="name" value="" class="form-control" placeholder="IME*">
+                                    <p class="name-error error"></p>
+                                    <input type="text" name="last-name" value="" class="form-control" placeholder="PREZIME*">
+                                    <p class="last-name-error error"></p>
+                                    <input type="email" name="email" value="" class="form-control" placeholder="EMAIL*">
+                                    <p class="email-error error"></p>
+                                    <input type="tel" name="phone" value="" class="form-control" placeholder="KONTAKT TELEFON*">
+                                    <p class="phone-error error"></p>
+                                    <input type="password" name="password" value="" class="form-control" placeholder="PASSWORD*">
+                                    <p class="password-error error"></p>
+                                    <input type="password" name="confirm-password" value="" class="form-control" placeholder="CONFIRM-PASSWORD*">
+                                    <p class="confirm-error error"></p>
+
+                                    <button type="submit" class="text-uppercase login-btn button">registruj se</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  <!-- modal -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 </html>

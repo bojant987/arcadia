@@ -1,5 +1,8 @@
 @media (min-width: 768px) {
     /* ---- global styles ---- */
+    h1 {
+        font-size: 60px;
+    }
     /* ---- upper header styles ---- */
     .upper-header ul {
         float: right;
@@ -43,6 +46,38 @@
     .navbar-default .navbar-collapse .navbar-nav li:last-of-type {
         margin-right: 0;
     }
+    /* ---- login and register modals styles ---- */
+    .login-modal .login {
+        margin-bottom: 0;
+    }
+    .modal .register-btn {
+        top: 151px;
+    }
+    /* ---- product banner styles ---- */
+    .product-banner ul li {
+        font-size: 14px;
+    }
+    .product-banner .product-submenu {
+        left: 300px;
+    }
+    .product-nav-collapse {
+        display: none;
+    }
+    .product-banner .product-menu {
+        margin-top: 20px;
+        display: inline-block;
+    }
+    /* ---- on sale styles ---- */
+    /* ---- partners styles ---- */
+    /* ---- footer styles ---- */
+    footer .footer-info li {
+        display: inline-block;
+        border-right: none;
+        border-right: 1px solid #737373;
+    }
+    footer .footer-info li:last-of-type {
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -65,6 +100,11 @@
         width: auto;
     }
     /* ---- main nav styles ---- */
+    /* ---- login and register modals styles ---- */
+    /* ---- product banner styles ---- */
+    /* ---- on sale styles ---- */
+    /* ---- partners styles ---- */
+    /* ---- footer styles ---- */
 }
 
 @media (min-width: 1200px) {
@@ -72,4 +112,23 @@
     /* ---- upper header styles ---- */
     /* ---- lower header styles ---- */
     /* ---- main nav styles ---- */
+    /* ---- login and register modals styles ---- */
+    /* ---- product banner styles ---- */
+    .product-banner .banner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 54%;
+        margin-bottom: 0;
+    }
+    /* ---- on sale styles ---- */
+    /* ---- partners styles ---- */
+    /* ---- footer styles ---- */
+}
+
+@media (min-width: 1990px) {
+    /* ---- product banner styles ---- */
+    .product-banner .banner {
+        width: 45%;
+    }
 }
