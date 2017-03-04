@@ -95,4 +95,32 @@ $(document).ready(function() {
         $(".product-menu").slideToggle();
     });
 
+    // product filter category collapse
+    $(".category .sub-filter-collapse").click(function() {
+        $(this).next().slideToggle();
+        $(this).children().toggleClass("fa-plus");
+        $(this).children().toggleClass("fa-minus");
+    });
+
+    // jquery slider
+    $(function() {
+        $("#slider").slider({
+            range: true,
+            min: 100,
+            max: 10000,
+            values: [100, 10000],
+            step: 50,
+            slide: function(e, element) {
+                $(".price-range span:first").text(element.values[0] + "din");
+                $(".price-range span:last").text(element.values[1] + "din");
+            }
+        });
+        $(".price-range span:first").text($("#slider").slider("values", 0) + "din");
+        $(".price-range span:last").text($("#slider").slider("values", 1) + "din");
+    });
+
+    $("#slider .ui-slider-handle").append("span");
+
+
+
 });

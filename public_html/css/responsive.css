@@ -78,6 +78,22 @@
     footer .footer-info li:last-of-type {
         margin-top: 10px;
     }
+    /* ---- products filter styles ---- */
+    .products-filter .main-filter label, .products-filter .sub-categories>label, .products-filter .category {
+        display: inline-block;
+        margin-right: 35px;
+    }
+    .products-filter .category label {
+        display: block;
+    }
+    .products-filter .sub-categories {
+        padding: 18px 0;
+    }
+    .products-filter .sub-categories .category p {
+        border: 1px solid #CECECC;
+        padding-right: 10px;
+    }
+    /* ---- all products styles ---- */
 }
 
 @media (min-width: 992px) {
@@ -105,6 +121,8 @@
     /* ---- on sale styles ---- */
     /* ---- partners styles ---- */
     /* ---- footer styles ---- */
+    /* ---- products filter styles ---- */
+    /* ---- all products styles ---- */
 }
 
 @media (min-width: 1200px) {
@@ -124,6 +142,30 @@
     /* ---- on sale styles ---- */
     /* ---- partners styles ---- */
     /* ---- footer styles ---- */
+    /* ---- products filter styles ---- */
+    /* ---- all products styles ---- */
+}
+
+@media (min-width: 1600px) {
+    /* ---- products filter styles ---- */
+    .products-filter {
+        max-width: 250px;
+        padding-left: 50px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+    }
+    .product-filter .sub-categories {
+        padding: 18px 0;
+    }
+    .products-filter .main-filter label, .products-filter .sub-categories>label, .products-filter .category {
+        display: block;
+        margin-right: 0;
+    }
+    .products-filter .sub-categories .category p {
+        border: none;
+        padding-right: 0;
+    }
 }
 
 @media (min-width: 1990px) {
