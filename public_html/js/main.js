@@ -121,6 +121,79 @@ $(document).ready(function() {
 
     $("#slider .ui-slider-handle").append("span");
 
+    // single product modal
+    function getIdentifiers() {
+        var identifiers = [];
+        $(".all-products .product").each(function() {
+            identifiers.push($(this).attr("data-id"));
+        });
+        return identifiers;
+    }
+
+    function setNewProduct(product) {
+        var productId = product.find(".product-id").html();
+        var productPriceOne = product.find("div.product-price:first").html();
+        var productPriceTwo = product.find("div.product-price:last").html();
+        var productName = product.find(".product-name").text();
+        var imageSrc = product.find("img").attr("src");
+        var newSrc = imageSrc.replace(".jpg", "-lg.jpg");
+        var dataId = product.attr("data-id");
+
+        $(".single-product-modal .single-product").attr("data-id", dataId);
+        $(".single-product-modal .product-id").html(productId);
+        $(".single-product-modal div.product-price:first").html(productPriceOne);
+        $(".single-product-modal div.product-price:last").html(productPriceTwo);
+        $(".single-product-modal .product-name").text(productName);
+        $(".single-product-modal img").attr("src", newSrc);
+    }
+
+    $(".single-product-modal").on("show.bs.modal", function(e) {
+        var which = $(e.relatedTarget);
+        var product = which.parents(".product");
+
+        setNewProduct(product);
+    });
+
+    $(".product-left").click(function() {
+        var identifiers = getIdentifiers();
+        var currentId = $(".single-product-modal .single-product").attr("data-id");
+        var index = identifiers.findIndex(function(x) {
+            return x === currentId;
+        });
+        var prevIndex;
+
+        if (index === 0) {
+            prevIndex = identifiers.length - 1;
+        } else {
+            prevIndex = index - 1;
+        }
+
+        var prevId = identifiers[prevIndex];
+        var prevProduct = $(".all-products .product[data-id=" + prevId + "]");
+
+        setNewProduct(prevProduct);
+    });
+
+    $(".product-right").click(function() {
+        var identifiers = getIdentifiers();
+        var currentId = $(".single-product-modal .single-product").attr("data-id");
+        var index = identifiers.findIndex(function(x) {
+            return x === currentId;
+        });
+        var nextIndex;
+
+        if (index === identifiers.length - 1) {
+            nextIndex = 0;
+        } else {
+            nextIndex = index + 1;
+        }
+
+        var nextId = identifiers[nextIndex];
+        var nextProduct = $(".all-products .product[data-id=" + nextId + "]");
+
+        setNewProduct(nextProduct);
+
+    });
 
 
 });

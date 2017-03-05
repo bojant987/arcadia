@@ -7,24 +7,31 @@
 }
 
 @font-face {
-    font-family: 'BodoniFLF';
+    font-family: 'BodoniSVT';
     src: url('fonts/bodoni/BodoniFLF-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/bodoni/BodoniFLF-Bold.woff') format('woff'), url('fonts/bodoni/BodoniFLF-Bold.ttf') format('truetype'), url('fonts/bodoni/BodoniFLF-Bold.svg#BodoniFLF-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'BodoniFLF';
+    font-family: 'BodoniSVT';
     src: url('fonts/bodoni/BodoniFLF-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/bodoni/BodoniFLF-BoldItalic.woff') format('woff'), url('fonts/bodoni/BodoniFLF-BoldItalic.ttf') format('truetype'), url('fonts/bodoni/BodoniFLF-BoldItalic.svg#BodoniFLF-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'BodoniFLF';
+    font-family: 'BodoniSVT';
     src: url('fonts/bodoni/BodoniFLF-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/bodoni/BodoniFLF-Italic.woff') format('woff'), url('fonts/bodoni/BodoniFLF-Italic.ttf') format('truetype'), url('fonts/bodoni/BodoniFLF-Italic.svg#BodoniFLF-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'BodoniSVT';
+    src: url('fonts/bodoni2/BodoniSvtyTwoITCTTBook.eot?#iefix') format('embedded-opentype'), url('fonts/bodoni/BodoniSvtyTwoITCTTBook.woff') format('woff'), url('fonts/bodoni/BodoniSvtyTwoITCTTBook.ttf') format('truetype'), url('fonts/bodoni/BodoniSvtyTwoITCTTBook.svg#BodoniSvtyTwoITCTTBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -116,7 +123,7 @@ button:focus {
     margin: 0 auto 30px;
 }
 
-.product .product-id {
+.product .product-id, .single-product .product-id {
     font-weight: 500;
     font-size: 12px;
     height: 35px;
@@ -126,7 +133,7 @@ button:focus {
     width: 80%;
 }
 
-.product .product-id span {
+.product .product-id span, .single-product .product-id span {
     font-weight: bold;
 }
 
@@ -140,23 +147,24 @@ button:focus {
     padding-right: 18px;
 }
 
-.product .product-price p:first-of-type {
+.product .product-price p:first-of-type, .single-product .product-price p:first-of-type {
     font-size: 10px;
     font-weight: 500;
 }
 
-.product .product-price p:nth-of-type(2) {
+.product .product-price p:nth-of-type(2), .single-product .product-price p:nth-of-type(2) {
     font-size: 14px;
     font-weight: 500;
     color: #7f401b;
 }
 
-.product .figure {
+.product figure {
     height: 180px;
     position: relative;
+    cursor: pointer;
 }
 
-.product .figure img {
+.product .figure img, .single-product .figure img {
     max-width: 100%;
     max-height: 100%;
     position: absolute;
@@ -199,6 +207,89 @@ button:focus {
 .product .add-to-cart:hover, .product .add-to-cart:focus {
     background-color: #ec1c24;
     text-decoration: none;
+}
+
+.single-product {
+    width: 289px;
+    margin: 0 auto;
+}
+
+.single-product .product-id {
+    border: none;
+}
+
+.single-product .product-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.single-product .all-prices {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.single-product .total-price {
+    margin: 10px 0 25px;
+    color: #ec1c24;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.single-product .row {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.single-product .row .product-price p {
+    margin: 0;
+}
+
+.single-product .figure {
+    height: 289px;
+    position: relative;
+}
+
+.single-product .single-product-cart {
+    width: 160px;
+    margin: 0 auto;
+}
+
+.single-product .single-product-cart a, .single-product .single-product-cart p {
+    display: block;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+}
+
+.single-product .single-product-cart a {
+    width: 35px;
+}
+
+.single-product .single-product-cart a:first-of-type {
+    background-color: #7f401b;
+}
+
+.single-product .single-product-cart a:nth-of-type(2) {
+    background-color: #ec1c24;
+}
+
+.single-product .single-product-cart a .fa {
+    color: #fff;
+    font-size: 14px;
+}
+
+.single-product .single-product-cart p {
+    width: 90px;
+    padding: 0 21px;
+    font-size: 12px;
+    font-weight: 500;
+    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.single-product .row .product-price:nth-of-type(2) {
+    background: url(assets/crossed.png) center center no-repeat;
 }
 
 
@@ -440,7 +531,7 @@ button:focus {
 
 /* ---- login and register modals styles ---- */
 
-.modal {
+.regiter-modal, .login-modal {
     padding-right: 0 !important;
 }
 
@@ -448,14 +539,19 @@ button:focus {
     width: 100%;
 }
 
-.modal .close {
+.modal .modal-content {
+    border-radius: 0;
+}
+
+.register-modal .close, .login-modal .close {
     position: absolute;
     top: 23px;
     right: 23px;
     z-index: 10;
+    opacity: 1;
 }
 
-.modal .close span {
+.register-modal .close span, .login-modal .close span {
     display: inline-block;
     width: 27px;
     height: 26px;
@@ -470,12 +566,12 @@ button:focus {
     margin-bottom: 40px;
 }
 
-.modal h2 {
+.register-modal h2, .login-modal h2 {
     font-size: 20px;
     margin: 0 0 10px;
 }
 
-.modal p {
+.register-modal p, .login-modal p {
     font-size: 12px;
     font-style: italic;
     margin-bottom: 22px;
@@ -990,3 +1086,42 @@ footer .social li a:hover .fa {
 
 
 /* ---- single product modal styles ---- */
+
+.single-product p {
+    transition: 1s;
+}
+
+.single-product-modal .close span {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url(assets/close.png) center center no-repeat;
+    background-color: #7f401b;
+}
+
+.single-product-modal .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    opacity: 1;
+}
+
+.single-product-modal .product-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: none;
+}
+
+.single-product-modal .product-left {
+    left: 5%;
+    background: url(assets/modal-arrows.png) 0 0 no-repeat;
+}
+
+.single-product-modal .product-right {
+    right: 5%;
+    background: url(assets/modal-arrows.png) -48px 0 no-repeat;
+}
