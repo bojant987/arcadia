@@ -7,21 +7,21 @@
 }
 
 @font-face {
-    font-family: 'BodoniSVT';
+    font-family: 'BodoniFLF';
     src: url('fonts/bodoni/BodoniFLF-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/bodoni/BodoniFLF-Bold.woff') format('woff'), url('fonts/bodoni/BodoniFLF-Bold.ttf') format('truetype'), url('fonts/bodoni/BodoniFLF-Bold.svg#BodoniFLF-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'BodoniSVT';
+    font-family: 'BodoniFLF';
     src: url('fonts/bodoni/BodoniFLF-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/bodoni/BodoniFLF-BoldItalic.woff') format('woff'), url('fonts/bodoni/BodoniFLF-BoldItalic.ttf') format('truetype'), url('fonts/bodoni/BodoniFLF-BoldItalic.svg#BodoniFLF-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'BodoniSVT';
+    font-family: 'BodoniFLF';
     src: url('fonts/bodoni/BodoniFLF-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/bodoni/BodoniFLF-Italic.woff') format('woff'), url('fonts/bodoni/BodoniFLF-Italic.ttf') format('truetype'), url('fonts/bodoni/BodoniFLF-Italic.svg#BodoniFLF-Italic') format('svg');
     font-weight: normal;
     font-style: italic;
@@ -157,11 +157,12 @@ button:focus {
     font-weight: 500;
     color: #7f401b;
 }
-
+.all-products .product figure {
+    cursor: pointer;
+}
 .product figure {
     height: 180px;
     position: relative;
-    cursor: pointer;
 }
 
 .product .figure img, .single-product .figure img {
@@ -193,7 +194,7 @@ button:focus {
     background-color: #7f401b;
     transition: 0.4s;
     text-align: left;
-    transform: translateX(-0px);
+    margin: 0 -1px;
 }
 
 .product .add-to-cart .fa {
@@ -538,9 +539,12 @@ button:focus {
 }
 
 .modal .modal-lg {
-    width: 100%;
+    width: 98%;
 }
-
+/**/
+.modal .modal-lg .modal-dialog {
+    margin: 0;
+}
 .modal .modal-content {
     border-radius: 0;
 }
@@ -689,8 +693,27 @@ button:focus {
 .register .error {
     text-align: left;
 }
+.social li {
+    margin-right: 13px;
+    padding: 0;
+}
 
+.social li:last-of-type {
+    margin-right: 0;
+}
 
+.social li a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+.social li .fa {
+    font-size: 16px;
+    transition: 0.4s;
+}
 /* ---- product banner styles ---- */
 
 .product-banner {
@@ -876,32 +899,17 @@ footer .footer-info li:nth-of-type(3) {
     transform: translateY(10px);
 }
 
-footer .social li {
-    margin-right: 13px;
-}
-
-footer .social li:last-of-type {
-    margin-right: 0;
-}
 
 footer .footer-info li a {
     color: #fff;
 }
 
 footer .social li a {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    line-height: 32px;
-    border-radius: 50%;
     background-color: #fff;
-    transition: 0.4s;
 }
 
 footer .social li .fa {
     color: #333;
-    font-size: 16px;
-    transition: 0.4s;
 }
 
 footer .social li a:hover {
@@ -1152,4 +1160,71 @@ footer .social li a:hover .fa {
 .single-product-modal .product-right {
     right: 5%;
     background: url(assets/modal-arrows.png) -48px 0 no-repeat;
+}
+/* ---- about banner styles ---- */
+.about-banner figure {
+    width: 100%;
+    
+}
+.about-banner figure img {
+    width: 100%;
+}
+/* ---- about us styles ---- */
+.about-us {
+    padding: 40px 0 120px;
+}
+.about-us h1 {
+    margin-bottom: 60px;
+}
+.about-us p {
+    max-width: 705px;
+    text-align: justify;
+    margin: 0 auto;
+    text-indent: 12px;
+    color: #666564;
+    font-size: 15px;
+    font-weight: 300;
+}
+/* ---- map styles ---- */
+#map {
+    width: 100%;
+    height: 500px;
+    background-color: grey;
+}
+/* ---- contact styles ---- */
+.contact {
+    padding: 40px 0 100px;
+}
+.contact h1 {
+    margin-bottom: 40px;
+}
+.contact .contact-info  {
+    margin-bottom: 50px;
+}
+.contact .contact-info li {
+    margin-bottom: 26px;
+}
+.contact .contact-info li:first-of-type {
+    font-weight: bold;
+}
+.contact .contact-info li:last-of-type {
+    margin-bottom: 0;
+}
+.contact .contact-info li a {
+    color: #7f401b;
+}
+.contact .social li a {
+    background-color: #7f401b;
+}
+
+.contact .social li .fa {
+    color: #fff;
+}
+
+.contact .social li a:hover {
+    background-color: transparent;
+}
+
+.contact .social li a:hover .fa {
+    color: #7f401b;
 }
