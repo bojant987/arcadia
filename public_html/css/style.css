@@ -521,17 +521,19 @@ button:focus {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
     color: #7f401b;
     background-color: transparent;
+    font-weight: 900;
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: #7f401b;
     background-color: transparent;
+    font-weight: 900;
 }
 
 
 /* ---- login and register modals styles ---- */
 
-.regiter-modal, .login-modal {
+.register-modal, .login-modal {
     padding-right: 0 !important;
 }
 
@@ -541,6 +543,17 @@ button:focus {
 
 .modal .modal-content {
     border-radius: 0;
+}
+
+.register-modal .help-block {
+    height: 20px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.register-modal .form-group {
+    margin-bottom: 8px;
 }
 
 .register-modal .close, .login-modal .close {
@@ -569,6 +582,10 @@ button:focus {
 .register-modal h2, .login-modal h2 {
     font-size: 20px;
     margin: 0 0 10px;
+}
+
+.register-modal h2 {
+    margin-bottom: 20px;
 }
 
 .register-modal p, .login-modal p {
@@ -711,15 +728,19 @@ button:focus {
     display: inline-block;
 }
 
+.product-banner ul>li span {
+    vertical-align: middle;
+}
+
 .product-banner ul li {
-    font-weight: bold;
     margin-bottom: 10px;
     cursor: pointer;
     font-size: 12px;
 }
 
-.product-banner ul li:hover {
+.product-banner .product-menu>li:hover span {
     color: #7f401b;
+    font-weight: bold;
 }
 
 .product-banner ul li img {
@@ -731,20 +752,22 @@ button:focus {
     display: none;
 }
 
-.product-banner .product-menu li {
+.product-banner .product-menu>li {
     border-bottom: 1px solid #f4f3f0;
 }
 
-.product-banner .product-menu li:last-of-type {
+.product-banner .product-menu>li:last-of-type {
     border-bottom: none;
+}
+
+.product-banner .product-menu .active-menu span {
+    color: #7f401b;
+    font-weight: bold;
 }
 
 .product-banner .product-submenu {
     width: 190px;
     padding: 20px 30px;
-    position: absolute;
-    top: -20px;
-    left: 205px;
     vertical-align: top;
     display: none;
     border-top: 1px solid #f0e2d0;
@@ -759,6 +782,11 @@ button:focus {
 .product-banner .product-submenu li {
     height: 28.25px;
     line-height: 28.25px;
+}
+
+.product-banner .product-submenu li:hover {
+    color: #7f401b;
+    font-weight: bold;
 }
 
 .product-banner .product-submenu li:first-of-type {

@@ -57,15 +57,24 @@
     .product-banner ul li {
         font-size: 14px;
     }
-    .product-banner .product-submenu {
-        left: 300px;
-    }
     .product-nav-collapse {
         display: none;
     }
     .product-banner .product-menu {
         margin-top: 20px;
         display: inline-block;
+    }
+    .product-banner .product-submenu {
+        width: 190px;
+        padding: 20px 30px;
+        position: absolute;
+        top: -20px;
+        left: 300px;
+        vertical-align: top;
+        display: none;
+        border-top: 1px solid #f0e2d0;
+        border-bottom: 1px solid #f0e2d0;
+        background-color: #fff;
     }
     /* ---- on sale styles ---- */
     /* ---- partners styles ---- */

@@ -1,10 +1,15 @@
 $(document).ready(function() {
 
     // refactor paragraph to act as select
-    $(".custom-select").click(function() {
+    $(".custom-select").click(function(e) {
         $(".select-dropdown").slideToggle();
-
+        e.stopPropagation();
     });
+
+    $(document).click(function() {
+        $(".select-dropdown").slideUp();
+    });
+
     $(".select-dropdown").on("click", "li", function() {
         //default value
         $(".order").val("01-01-2017");
@@ -18,79 +23,64 @@ $(document).ready(function() {
         $(this).parent().slideUp();
     });
 
-    // swap images on hover over product menu
-    $(".product-menu li").mouseover(function() {
-        var orgSource = $(this).children().attr("src");
-        var newSource = orgSource.replace(".png", "-hover.png");
-        $(this).children().attr("src", newSource);
-        $(".product-menu li").mouseout(function() {
-            $(this).children().attr("src", orgSource);
+    // swap images on product menu hover
+    $(".product-menu").on("mouseenter", ".submenu-open", function() {
+        var icon = $(this).find(".menu-icon");
+        var orgSource = icon.attr("src");
+        var hoverSource = orgSource.replace(".png", "-hover.png");
+
+        if (!$(this).hasClass("active-menu") && icon.attr("src").indexOf("hover") === -1) {
+
+            icon.attr("src", hoverSource);
+        }
+        $(this).mouseleave(function() {
+            if (!$(this).hasClass("active-menu")) {
+                icon.attr("src", orgSource);
+            }
         });
-    });
 
 
-    // modal register form validation
-    function validate(e) {
-        var name = $(".register input[name=name]").val();
-        var lastName = $(".register input[name=last-name]").val();
-        var email = $(".register input[name=email]").val();
-        var phone = $(".register input[name=phone]").val();
-        var password = $(".register input[name=password]").val();
-        var errors = 0;
-
-        // validate name
-        if (name.length === 0) {
-            $(".name-error").html("*Ime je obavezno polje.");
-            errors++;
-        } else if (name.length < 3 || name.length > 15) {
-            $(".name-error").html("*Ime mora biti dužine između 3 i 15 karaktera.");
-            errors++;
-        }
-        // validate last name
-        if (lastName.length === 0) {
-            $(".last-name-error").html("*Prezime je obavezno polje.");
-            errors++;
-        } else if (lastName.length < 3 || name.length > 20) {
-            $(".last-name-error").html("*Prezime mora biti dužine između 3 i 20 karaktera.");
-            errors++;
-        }
-        // validate email
-        if (email.length === 0) {
-            $(".email-error").html("*Email adresa je obavezno polje.");
-            errors++;
-        } else if (email.indexOf("@") === -1) {
-            $(".email-error").html("*Email adresa mora biti validna.");
-            errors++;
-        }
-        // validate phone number
-        if (phone.length === 0) {
-            $(".phone-error").html("*Kontakt telefon je obavezno polje.");
-            errors++;
-        } else if (isNaN(parseInt(phone))) {
-            $(".phone-error").html("*Kontakt telefon mora biti validan.");
-            errors++;
-        }
-
-        // check for errors
-        if (errors > 0) {
-            e.preventDefault();
-        }
-    }
-    // submit event
-    $(".register .login-btn").click(function(e) {
-        validate(e);
     });
 
     // open product submenu
-    $(".product-menu").on("click", "li", function() {
-        $(".product-submenu").hide();
+    $(".product-menu").on("click", ".submenu-open", function() {
         var menu = $(this).attr("data-open");
         var submenu = $("#" + menu);
-        submenu.slideDown(600);
+
+        var icon = !$(this).is($(".product-menu .active-menu")) ? $(".product-menu").find(".active-menu .menu-icon") : undefined;
+
+        var hoverSource;
+        var orgSource;
+        if (icon !== undefined) {
+            hoverSource = icon.attr("src");
+            if (hoverSource !== undefined) {
+                orgSource = hoverSource.replace("-hover.png", ".png");
+                icon.attr("src", orgSource);
+            }
+
+        }
+
+        $(this).siblings().removeClass("active-menu");
+
+
+        $(this).toggleClass("active-menu");
+        $(this).siblings().find(".product-submenu").hide();
+
+        submenu.slideToggle(600);
+
     });
 
     // product nav collapse
     $(".product-nav-collapse").click(function() {
+        var hoverSource = $(".product-menu").find(".active-menu .menu-icon").attr("src");
+
+        if (hoverSource !== undefined) {
+            var orgSource = hoverSource.replace("-hover.png", ".png");
+            $(".product-menu").find(".active-menu .menu-icon").attr("src", orgSource);
+        }
+
+
+        $(".product-menu li").removeClass("active-menu");
         $(".product-submenu").slideUp();
         $(".product-menu").slideToggle();
     });
@@ -113,8 +103,25 @@ $(document).ready(function() {
             slide: function(e, element) {
                 $(".price-range span:first").text(element.values[0] + "din");
                 $(".price-range span:last").text(element.values[1] + "din");
+
+            },
+            // product price filtering
+            stop: function(e, element) {
+                var products = $(".all-products .product");
+                for (var i = 0; i < products.length; i++) {
+                    var price = $(".all-products .product:eq(" + i + ")").attr("data-price");
+                    var dataId = $(".all-products .product:eq(" + i + ")").attr("data-id");
+                    price = parseInt(price);
+                    if (price < element.values[0] || price > element.values[1]) {
+                        $(".all-products .product:eq(" + i + ")").parent().fadeOut();
+                    } else {
+                        $(".all-products .product:eq(" + i + ")").parent().fadeIn();
+                    }
+                }
             }
+
         });
+
         $(".price-range span:first").text($("#slider").slider("values", 0) + "din");
         $(".price-range span:last").text($("#slider").slider("values", 1) + "din");
     });
@@ -125,7 +132,9 @@ $(document).ready(function() {
     function getIdentifiers() {
         var identifiers = [];
         $(".all-products .product").each(function() {
-            identifiers.push($(this).attr("data-id"));
+            if (typeof $(this).attr("data-id") !== typeof undefined && $(this).attr("data-id") !== false && $(this).is(":visible")) {
+                identifiers.push($(this).attr("data-id"));
+            }
         });
         return identifiers;
     }
@@ -172,6 +181,7 @@ $(document).ready(function() {
         var prevProduct = $(".all-products .product[data-id=" + prevId + "]");
 
         setNewProduct(prevProduct);
+
     });
 
     $(".product-right").click(function() {
@@ -194,6 +204,8 @@ $(document).ready(function() {
         setNewProduct(nextProduct);
 
     });
+
+    // product category filtering
 
 
 });
