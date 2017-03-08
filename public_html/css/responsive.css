@@ -24,10 +24,6 @@
     .lower-header .shopping-cart .custom-select {
         display: inline-block;
     }
-    .lower-header .logo {
-        width: 170px;
-        display: inline-block;
-    }
     /* ---- main nav styles ---- */
     .navbar-default .navbar-brand {
         display: none;
@@ -132,7 +128,7 @@
         transform: translateX(4px);
     }
     .lower-header .shopping-cart {
-        transform: translateX(5px);
+        float: right;
     }
     .lower-header .shopping-cart .buttons {
         vertical-align: top;
