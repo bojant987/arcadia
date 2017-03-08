@@ -238,7 +238,12 @@ $(document).ready(function() {
         $("body").addClass("modal-open");
     });
 
-
+    $(".single-product-modal").on("hide.bs.modal", function(e) {
+        $("body").removeClass("modal-open");
+    });
+    $(".single-product-modal").on("show.bs.modal", function(e) {
+        $("body").addClass("modal-open");
+    });
 
 
 
