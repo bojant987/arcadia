@@ -27,7 +27,7 @@
             <div class="upper-header clearfix">
                 <div class="container">
                     <ul class="list-inline">
-                        <li><a href="#" data-toggle="modal" data-target=".login-modal">Prijava</a></li>
+                        <li><a href="#" data-toggle="modal" data-target=".login-modal" class="login-modal-btn">Prijava</a></li>
                         <li><a href="#" data-toggle="modal" data-target=".register-modal">Zahtev za registraciju</a></li>
                     </ul>
                 </div>
@@ -36,28 +36,28 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-5">
-                            <div class="search">
-                                <input type="search" placeholder="Pretraga">
-                                <button type="button" name="button"><span class="fa fa-search"></span></button>
-                            </div>
+                            <form class="search">
+                                  <input type="search" placeholder="Pretraga">
+                                  <button type="submit" name="button"><span class="fa fa-search"></span></button>
+                            </form>
                         </div>
                         <div class="col-md-5 col-md-offset-3 col-sm-5 col-sm-offset-2">
                             <div class="shopping-cart">
                                 <select class="order" name="order">
-                                    <option value="01-01-2017">Narudzbina za 01.01.2017.</option>
-                                    <option value="01-02-2017">Narudzbina za 01.02.2017.</option>
-                                    <option value="01-03-2017">Narudzbina za 01.03.2017.</option>
-                                    <option value="01-04-2017">Narudzbina za 01.04.2017.</option>
-                                    <option value="01-05-2017">Narudzbina za 01.05.2017.</option>
+                                    <option value="01-01-2017">Narudžbina za 01.01.2017.</option>
+                                    <option value="01-02-2017">Narudžbina za 01.02.2017.</option>
+                                    <option value="01-03-2017">Narudžbina za 01.03.2017.</option>
+                                    <option value="01-04-2017">Narudžbina za 01.04.2017.</option>
+                                    <option value="01-05-2017">Narudžbina za 01.05.2017.</option>
                                 </select>
                                 <div class="visible-select">
-                                    <p class="custom-select">Narudzbina za 01.01.2017.</p>
+                                    <p class="custom-select">Narudžbina za 01.01.2017.</p>
                                     <ul class="select-dropdown list-unstyled">
-                                        <li data-value="01-01-2017">Narudzbina za 01.01.2017.</li>
-                                        <li data-value="01-02-2017">Narudzbina za 01.02.2017.</li>
-                                        <li data-value="01-03-2017">Narudzbina za 01.03.2017.</li>
-                                        <li data-value="01-04-2017">Narudzbina za 01.04.2017.</li>
-                                        <li data-value="01-05-2017">Narudzbina za 01.05.2017.</li>
+                                        <li data-value="01-01-2017">Narudžbina za 01.01.2017.</li>
+                                        <li data-value="01-02-2017">Narudžbina za 01.02.2017.</li>
+                                        <li data-value="01-03-2017">Narudžbina za 01.03.2017.</li>
+                                        <li data-value="01-04-2017">Narudžbina za 01.04.2017.</li>
+                                        <li data-value="01-05-2017">Narudžbina za 01.05.2017.</li>
                                     </ul>
                                 </div>
                                 <div class="buttons">
@@ -103,204 +103,206 @@
                     <figure class="banner" style="background: #fffefa">
                         <img src="img/banner.jpg" alt="banner">
                     </figure>
-                    <button class="product-nav-collapse"><span class="fa fa-cogs"></span></button>
+                    <button class="product-nav-collapse collapse-button"><span class="fa fa-cogs"></span></button>
                     <nav class="product-nav">
                         <ul class="product-menu list-unstyled">
                             <li class="text-uppercase submenu-open" data-open="alcohol">
                                 <img src="img/alcohol-icon.png" alt="alcohol" class="menu-icon"><span>Alkoholna pića</span>
                                 <ul class="product-submenu list-unstyled" id="alcohol">
                                     <li class="hidden-xs"><img src="img/alcohol-icon-hover.png" alt="alcohol"></li>
-                                    <li class="text-uppercase">absinth</li>
-                                    <li class="text-uppercase">bitteri</li>
-                                    <li class="text-uppercase">brandy</li>
-                                    <li class="text-uppercase">burboni</li>
-                                    <li class="text-uppercase">džin</li>
-                                    <li class="text-uppercase">konjak</li>
-                                    <li class="text-uppercase">likeri</li>
-                                    <li class="text-uppercase">rakije</li>
-                                    <li class="text-uppercase">rum</li>
-                                    <li class="text-uppercase">tequila</li>
-                                    <li class="text-uppercase">vermut</li>
-                                    <li class="text-uppercase">vodka</li>
-                                    <li class="text-uppercase">whiskey</li>
+                                    <li class="text-uppercase"><a href="#">absinth</a></li>
+                                    <li class="text-uppercase"><a href="#">bitteri</a></li>
+                                    <li class="text-uppercase"><a href="#">brandy</a></li>
+                                    <li class="text-uppercase"><a href="#">burboni</a></li>
+                                    <li class="text-uppercase"><a href="#">džin</a></li>
+                                    <li class="text-uppercase"><a href="#">konjak</a></li>
+                                    <li class="text-uppercase"><a href="#">likeri</a></li>
+                                    <li class="text-uppercase"><a href="#">rakije</a></li>
+                                    <li class="text-uppercase"><a href="#">rum</a></li>
+                                    <li class="text-uppercase"><a href="#">tequila</a></li>
+                                    <li class="text-uppercase"><a href="#">vermut</a></li>
+                                    <li class="text-uppercase"><a href="#">vodka</a></li>
+                                    <li class="text-uppercase"><a href="#">whiskey</a></li>
                                 </ul>
                             </li>
                             <li class="text-uppercase submenu-open" data-open="coffee">
                                 <img src="img/coffee-icon.png" alt="coffee" class="menu-icon"><span>Čajevi, kafe i hrana</span>
                                 <ul class="product-submenu list-unstyled" id="coffee">
                                     <li class="hidden-xs"><img src="img/coffee-icon-hover.png" alt="coffee"></li>
-                                    <li class="text-uppercase">absinth</li>
-                                    <li class="text-uppercase">bitteri</li>
-                                    <li class="text-uppercase">brandy</li>
-                                    <li class="text-uppercase">burboni</li>
-                                    <li class="text-uppercase">džin</li>
-                                    <li class="text-uppercase">konjak</li>
-                                    <li class="text-uppercase">likeri</li>
-                                    <li class="text-uppercase">rakije</li>
-                                    <li class="text-uppercase">rum</li>
-                                    <li class="text-uppercase">tequila</li>
-                                    <li class="text-uppercase">vermut</li>
-                                    <li class="text-uppercase">vodka</li>
-                                    <li class="text-uppercase">whiskey</li>
+                                    <li class="text-uppercase"><a href="#">absinth</a></li>
+                                    <li class="text-uppercase"><a href="#">bitteri</a></li>
+                                    <li class="text-uppercase"><a href="#">brandy</a></li>
+                                    <li class="text-uppercase"><a href="#">burboni</a></li>
+                                    <li class="text-uppercase"><a href="#">džin</a></li>
+                                    <li class="text-uppercase"><a href="#">konjak</a></li>
+                                    <li class="text-uppercase"><a href="#">likeri</a></li>
+                                    <li class="text-uppercase"><a href="#">rakije</a></li>
+                                    <li class="text-uppercase"><a href="#">rum</a></li>
+                                    <li class="text-uppercase"><a href="#">tequila</a></li>
+                                    <li class="text-uppercase"><a href="#">vermut</a></li>
+                                    <li class="text-uppercase"><a href="#">vodka</a></li>
+                                    <li class="text-uppercase"><a href="#">whiskey</a></li>
                                 </ul>
                             </li>
                             <li class="text-uppercase submenu-open" data-open="beer">
                                 <img src="img/beer-icon.png" alt="beer" class="menu-icon"><span>Piva, cideri i breezeri</span>
                                 <ul class="product-submenu list-unstyled" id="beer">
                                     <li class="hidden-xs"><img src="img/beer-icon-hover.png" alt="beer"></li>
-                                    <li class="text-uppercase">absinth</li>
-                                    <li class="text-uppercase">bitteri</li>
-                                    <li class="text-uppercase">brandy</li>
-                                    <li class="text-uppercase">burboni</li>
-                                    <li class="text-uppercase">džin</li>
-                                    <li class="text-uppercase">konjak</li>
-                                    <li class="text-uppercase">likeri</li>
-                                    <li class="text-uppercase">rakije</li>
-                                    <li class="text-uppercase">rum</li>
-                                    <li class="text-uppercase">tequila</li>
-                                    <li class="text-uppercase">vermut</li>
-                                    <li class="text-uppercase">vodka</li>
-                                    <li class="text-uppercase">whiskey</li>
+                                    <li class="text-uppercase"><a href="#">absinth</a></li>
+                                    <li class="text-uppercase"><a href="#">bitteri</a></li>
+                                    <li class="text-uppercase"><a href="#">brandy</a></li>
+                                    <li class="text-uppercase"><a href="#">burboni</a></li>
+                                    <li class="text-uppercase"><a href="#">džin</a></li>
+                                    <li class="text-uppercase"><a href="#">konjak</a></li>
+                                    <li class="text-uppercase"><a href="#">likeri</a></li>
+                                    <li class="text-uppercase"><a href="#">rakije</a></li>
+                                    <li class="text-uppercase"><a href="#">rum</a></li>
+                                    <li class="text-uppercase"><a href="#">tequila</a></li>
+                                    <li class="text-uppercase"><a href="#">vermut</a></li>
+                                    <li class="text-uppercase"><a href="#">vodka</a></li>
+                                    <li class="text-uppercase"><a href="#">whiskey</a></li>
                                 </ul>
                             </li>
                             <li class="text-uppercase submenu-open" data-open="champagne">
                                 <img src="img/champagne-icon.png" alt="champagne" class="menu-icon"><span>Šampanjci</span>
                                 <ul class="product-submenu list-unstyled" id="champagne">
                                     <li class="hidden-xs"><img src="img/champagne-icon-hover.png" alt="champagne"></li>
-                                    <li class="text-uppercase">absinth</li>
-                                    <li class="text-uppercase">bitteri</li>
-                                    <li class="text-uppercase">brandy</li>
-                                    <li class="text-uppercase">burboni</li>
-                                    <li class="text-uppercase">džin</li>
-                                    <li class="text-uppercase">konjak</li>
-                                    <li class="text-uppercase">likeri</li>
-                                    <li class="text-uppercase">rakije</li>
-                                    <li class="text-uppercase">rum</li>
-                                    <li class="text-uppercase">tequila</li>
-                                    <li class="text-uppercase">vermut</li>
-                                    <li class="text-uppercase">vodka</li>
-                                    <li class="text-uppercase">whiskey</li>
+                                    <li class="text-uppercase"><a href="#">absinth</a></li>
+                                    <li class="text-uppercase"><a href="#">bitteri</a></li>
+                                    <li class="text-uppercase"><a href="#">brandy</a></li>
+                                    <li class="text-uppercase"><a href="#">burboni</a></li>
+                                    <li class="text-uppercase"><a href="#">džin</a></li>
+                                    <li class="text-uppercase"><a href="#">konjak</a></li>
+                                    <li class="text-uppercase"><a href="#">likeri</a></li>
+                                    <li class="text-uppercase"><a href="#">rakije</a></li>
+                                    <li class="text-uppercase"><a href="#">rum</a></li>
+                                    <li class="text-uppercase"><a href="#">tequila</a></li>
+                                    <li class="text-uppercase"><a href="#">vermut</a></li>
+                                    <li class="text-uppercase"><a href="#">vodka</a></li>
+                                    <li class="text-uppercase"><a href="#">whiskey</a></li>
                                 </ul>
                             </li>
                             <li class="text-uppercase submenu-open" data-open="juice">
-                                <img src="img/juice-icon.png" alt="juice" class="menu-icon"></span><span>Sokovi</span>
+                                <img src="img/juice-icon.png" alt="juice" class="menu-icon"><span>Sokovi</span>
                                 <ul class="product-submenu list-unstyled" id="juice">
                                     <li class="hidden-xs"><img src="img/juice-icon-hover.png" alt="juice"></li>
-                                    <li class="text-uppercase">absinth</li>
-                                    <li class="text-uppercase">bitteri</li>
-                                    <li class="text-uppercase">brandy</li>
-                                    <li class="text-uppercase">burboni</li>
-                                    <li class="text-uppercase">džin</li>
-                                    <li class="text-uppercase">konjak</li>
-                                    <li class="text-uppercase">likeri</li>
-                                    <li class="text-uppercase">rakije</li>
-                                    <li class="text-uppercase">rum</li>
-                                    <li class="text-uppercase">tequila</li>
-                                    <li class="text-uppercase">vermut</li>
-                                    <li class="text-uppercase">vodka</li>
-                                    <li class="text-uppercase">whiskey</li>
+                                    <li class="text-uppercase"><a href="#">absinth</a></li>
+                                    <li class="text-uppercase"><a href="#">bitteri</a></li>
+                                    <li class="text-uppercase"><a href="#">brandy</a></li>
+                                    <li class="text-uppercase"><a href="#">burboni</a></li>
+                                    <li class="text-uppercase"><a href="#">džin</a></li>
+                                    <li class="text-uppercase"><a href="#">konjak</a></li>
+                                    <li class="text-uppercase"><a href="#">likeri</a></li>
+                                    <li class="text-uppercase"><a href="#">rakije</a></li>
+                                    <li class="text-uppercase"><a href="#">rum</a></li>
+                                    <li class="text-uppercase"><a href="#">tequila</a></li>
+                                    <li class="text-uppercase"><a href="#">vermut</a></li>
+                                    <li class="text-uppercase"><a href="#">vodka</a></li>
+                                    <li class="text-uppercase"><a href="#">whiskey</a></li>
                                 </ul>
                             </li>
                             <li class="text-uppercase submenu-open" data-open="material">
                                 <img src="img/material-icon.png" alt="material" class="menu-icon"><span>Ugostiteljski materijal</span>
                                 <ul class="product-submenu list-unstyled" id="material">
                                     <li class="hidden-xs"><img src="img/material-icon-hover.png" alt="material"></li>
-                                    <li class="text-uppercase">absinth</li>
-                                    <li class="text-uppercase">bitteri</li>
-                                    <li class="text-uppercase">brandy</li>
-                                    <li class="text-uppercase">burboni</li>
-                                    <li class="text-uppercase">džin</li>
-                                    <li class="text-uppercase">konjak</li>
-                                    <li class="text-uppercase">likeri</li>
-                                    <li class="text-uppercase">rakije</li>
-                                    <li class="text-uppercase">rum</li>
-                                    <li class="text-uppercase">tequila</li>
-                                    <li class="text-uppercase">vermut</li>
-                                    <li class="text-uppercase">vodka</li>
-                                    <li class="text-uppercase">whiskey</li>
+                                    <li class="text-uppercase"><a href="#">absinth</a></li>
+                                    <li class="text-uppercase"><a href="#">bitteri</a></li>
+                                    <li class="text-uppercase"><a href="#">brandy</a></li>
+                                    <li class="text-uppercase"><a href="#">burboni</a></li>
+                                    <li class="text-uppercase"><a href="#">džin</a></li>
+                                    <li class="text-uppercase"><a href="#">konjak</a></li>
+                                    <li class="text-uppercase"><a href="#">likeri</a></li>
+                                    <li class="text-uppercase"><a href="#">rakije</a></li>
+                                    <li class="text-uppercase"><a href="#">rum</a></li>
+                                    <li class="text-uppercase"><a href="#">tequila</a></li>
+                                    <li class="text-uppercase"><a href="#">vermut</a></li>
+                                    <li class="text-uppercase"><a href="#">vodka</a></li>
+                                    <li class="text-uppercase"><a href="#">whiskey</a></li>
                                 </ul>
                             </li>
                             <li class="text-uppercase submenu-open" data-open="wine">
                                 <img src="img/wine-icon.png" alt="wine" class="menu-icon"><span>Vina</span>
                                 <ul class="product-submenu list-unstyled" id="wine">
                                     <li class="hidden-xs"><img src="img/wine-icon-hover.png" alt="wine"></li>
-                                    <li class="text-uppercase">absinth</li>
-                                    <li class="text-uppercase">bitteri</li>
-                                    <li class="text-uppercase">brandy</li>
-                                    <li class="text-uppercase">burboni</li>
-                                    <li class="text-uppercase">džin</li>
-                                    <li class="text-uppercase">konjak</li>
-                                    <li class="text-uppercase">likeri</li>
-                                    <li class="text-uppercase">rakije</li>
-                                    <li class="text-uppercase">rum</li>
-                                    <li class="text-uppercase">tequila</li>
-                                    <li class="text-uppercase">vermut</li>
-                                    <li class="text-uppercase">vodka</li>
-                                    <li class="text-uppercase">whiskey</li>
+                                    <li class="text-uppercase"><a href="#">absinth</a></li>
+                                    <li class="text-uppercase"><a href="#">bitteri</a></li>
+                                    <li class="text-uppercase"><a href="#">brandy</a></li>
+                                    <li class="text-uppercase"><a href="#">burboni</a></li>
+                                    <li class="text-uppercase"><a href="#">džin</a></li>
+                                    <li class="text-uppercase"><a href="#">konjak</a></li>
+                                    <li class="text-uppercase"><a href="#">likeri</a></li>
+                                    <li class="text-uppercase"><a href="#">rakije</a></li>
+                                    <li class="text-uppercase"><a href="#">rum</a></li>
+                                    <li class="text-uppercase"><a href="#">tequila</a></li>
+                                    <li class="text-uppercase"><a href="#">vermut</a></li>
+                                    <li class="text-uppercase"><a href="#">vodka</a></li>
+                                    <li class="text-uppercase"><a href="#">whiskey</a></li>
                                 </ul>
                             </li>
                             <li class="text-uppercase submenu-open" data-open="water">
                                 <img src="img/water-icon.png" alt="water" class="menu-icon"><span>Vode</span>
                                 <ul class="product-submenu list-unstyled" id="water">
                                     <li class="hidden-xs"><img src="img/water-icon-hover.png" alt="water"></li>
-                                    <li class="text-uppercase">absinth</li>
-                                    <li class="text-uppercase">bitteri</li>
-                                    <li class="text-uppercase">brandy</li>
-                                    <li class="text-uppercase">burboni</li>
-                                    <li class="text-uppercase">džin</li>
-                                    <li class="text-uppercase">konjak</li>
-                                    <li class="text-uppercase">likeri</li>
-                                    <li class="text-uppercase">rakije</li>
-                                    <li class="text-uppercase">rum</li>
-                                    <li class="text-uppercase">tequila</li>
-                                    <li class="text-uppercase">vermut</li>
-                                    <li class="text-uppercase">vodka</li>
-                                    <li class="text-uppercase">whiskey</li>
+                                    <li class="text-uppercase"><a href="#">absinth</a></li>
+                                    <li class="text-uppercase"><a href="#">bitteri</a></li>
+                                    <li class="text-uppercase"><a href="#">brandy</a></li>
+                                    <li class="text-uppercase"><a href="#">burboni</a></li>
+                                    <li class="text-uppercase"><a href="#">džin</a></li>
+                                    <li class="text-uppercase"><a href="#">konjak</a></li>
+                                    <li class="text-uppercase"><a href="#">likeri</a></li>
+                                    <li class="text-uppercase"><a href="#">rakije</a></li>
+                                    <li class="text-uppercase"><a href="#">rum</a></li>
+                                    <li class="text-uppercase"><a href="#">tequila</a></li>
+                                    <li class="text-uppercase"><a href="#">vermut</a></li>
+                                    <li class="text-uppercase"><a href="#">vodka</a></li>
+                                    <li class="text-uppercase"><a href="#">whiskey</a></li>
                                 </ul>
                             </li>
                             <li class="text-uppercase submenu-open" data-open="syrup">
                                 <img src="img/syrup-icon.png" alt="syrup" class="menu-icon"><span>Sirupi</span>
                                 <ul class="product-submenu list-unstyled" id="syrup">
                                     <li class="hidden-xs"><img src="img/syrup-icon-hover.png" alt="syrup"></li>
-                                    <li class="text-uppercase">absinth</li>
-                                    <li class="text-uppercase">bitteri</li>
-                                    <li class="text-uppercase">brandy</li>
-                                    <li class="text-uppercase">burboni</li>
-                                    <li class="text-uppercase">džin</li>
-                                    <li class="text-uppercase">konjak</li>
-                                    <li class="text-uppercase">likeri</li>
-                                    <li class="text-uppercase">rakije</li>
-                                    <li class="text-uppercase">rum</li>
-                                    <li class="text-uppercase">tequila</li>
-                                    <li class="text-uppercase">vermut</li>
-                                    <li class="text-uppercase">vodka</li>
-                                    <li class="text-uppercase">whiskey</li>
+                                    <li class="text-uppercase"><a href="#">absinth</a></li>
+                                    <li class="text-uppercase"><a href="#">bitteri</a></li>
+                                    <li class="text-uppercase"><a href="#">brandy</a></li>
+                                    <li class="text-uppercase"><a href="#">burboni</a></li>
+                                    <li class="text-uppercase"><a href="#">džin</a></li>
+                                    <li class="text-uppercase"><a href="#">konjak</a></li>
+                                    <li class="text-uppercase"><a href="#">likeri</a></li>
+                                    <li class="text-uppercase"><a href="#">rakije</a></li>
+                                    <li class="text-uppercase"><a href="#">rum</a></li>
+                                    <li class="text-uppercase"><a href="#">tequila</a></li>
+                                    <li class="text-uppercase"><a href="#">vermut</a></li>
+                                    <li class="text-uppercase"><a href="#">vodka</a></li>
+                                    <li class="text-uppercase"><a href="#">whiskey</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </section>    <!-- product banner -->
-            <section class="on-sale text-center">
-                <div class="container">
+            <section class="on-sale" style="background: #fffefa">
+                <div class="container text-center">
                     <h1 class="text-uppercase">akcija</h1>
                     <p>Lorem Ipsum is simply dummy text of <span>10%</span> industry.</p>
                     <div class="products">
                         <div class="row">
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
-                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                <article class="product" data-id="1">
+                                    <p class="product-id">Šifra artikla: <span>1000</span></p>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -308,19 +310,21 @@
                                 </article>
                             </div>  <!-- col -->
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
+                                <article class="product" data-id="0">
                                     <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -328,19 +332,21 @@
                                 </article>
                             </div>  <!-- col -->
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
+                                <article class="product" data-id="2">
                                     <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -348,19 +354,21 @@
                                 </article>
                             </div>  <!-- col -->
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
+                                <article class="product" data-id="3">
                                     <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -368,19 +376,21 @@
                                 </article>
                             </div>  <!-- col -->
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
+                                <article class="product" data-id="4">
                                     <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -388,19 +398,21 @@
                                 </article>
                             </div>  <!-- col -->
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
+                                <article class="product" data-id="5">
                                     <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -408,19 +420,21 @@
                                 </article>
                             </div>  <!-- col -->
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
+                                <article class="product" data-id="6">
                                     <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -428,19 +442,21 @@
                                 </article>
                             </div>  <!-- col -->
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
+                                <article class="product" data-id="7">
                                     <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -448,19 +464,21 @@
                                 </article>
                             </div>  <!-- col -->
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
+                                <article class="product" data-id="8">
                                     <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -468,19 +486,21 @@
                                 </article>
                             </div>  <!-- col -->
                             <div class="col-sm-4 col-md-3 col-lg-5ths">
-                                <article class="product">
-                                    <p class="product-id">Šifra artikla: <span>2340</span></p>
-                                    <div class="row">
-                                        <div class="col-xs-6 text-left product-price">
-                                            <p>Sa PDV-om</p>
-                                            <p>2345.89</p>
-                                        </div>
-                                        <div class="col-xs-6 text-right product-price">
-                                            <p>Bez PDV-a</p>
-                                            <p>2345.89</p>
-                                        </div>
+                                <article class="product" data-id="9">
+                                    <p class="product-id">Šifra artikla: <span>200</span></p>
+                                    <div class="prices">
+                                      <div class="row">
+                                          <div class="col-xs-6 text-left product-price">
+                                              <p>Sa PDV-om</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                          <div class="col-xs-6 text-right product-price">
+                                              <p>Bez PDV-a</p>
+                                              <p>2345.89</p>
+                                          </div>
+                                      </div>
                                     </div>
-                                    <figure>
+                                    <figure class="open-modal" data-toggle="modal" data-target=".single-product-modal">
                                         <img src="img/product.jpg" alt="product">
                                     </figure>
                                     <p class="product-name">Absolut 100 0.7 L</p>
@@ -491,6 +511,42 @@
                     </div>    <!-- products -->
                     <button class="show-all button text-uppercase">pogledaj sve</button>
                 </div>    <!-- container -->
+                <div class="modal fade single-product-modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                            <div class="modal-body">
+                                <article class="single-product text-center">
+                                    <p class="product-id"><span></span></p>
+                                    <figure>
+                                        <img src="img/product-lg.jpg" alt="product">
+                                    </figure>
+                                    <p class="product-name"></p>
+                                    <div class="all-prices">
+                                        <div class="row">
+                                            <div class="col-xs-6 text-left product-price">
+                                                <p></p>
+                                                <p></p>
+                                            </div>
+                                            <div class="col-xs-6 text-right product-price crossed">
+                                                <p></p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                        <p class="total-price text-uppercase">1345,89</p>
+                                    </div>
+                                    <div class="single-product-cart clearfix">
+                                        <a href="#" class="view-cart"><span class="fa fa-shopping-cart"></span></a>
+                                        <p class="text-uppercase">dodaj</p>
+                                        <a href="#" class="add-to-cart"><span class="fa fa-plus"></span></a>
+                                    </div>
+                                </article>
+                                <button class="product-left product-arrow"></button>
+                                <button class="product-right product-arrow"></button>
+                            </div>
+                        </div>  <!-- modal-content -->
+                    </div>  <!-- modal-dialog -->
+                </div>   <!-- single product modal -->
             </section>    <!-- on sale -->
             <section class="partners text-center">
                 <div class="container">
@@ -568,7 +624,7 @@
                                     <p>Molimo Vas da uneste svoj e/mail i password</p>
                                     <input type="email" name="email" value="" class="form-control" placeholder="EMAIL*">
                                     <input type="password" name="password" value="" class="form-control" placeholder="PASSWORD*">
-                                    <p class="login-error error">*Email ili password netačni</p>
+                                    <p class="login-error error"></p>
                                     <div class="row">
                                         <div class="col-xs-6 text-left">
                                             <a href="#" class="forgotten-password">Zaboravili ste šifru?</a>
@@ -637,7 +693,7 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
         <script src="js/validator.min.js"></script>
         <script src="js/main.js"></script>
     </body>

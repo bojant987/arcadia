@@ -37,28 +37,28 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-5">
-                            <div class="search">
+                            <form class="search">
                                 <input type="search" placeholder="Pretraga">
-                                <button type="button" name="button"><span class="fa fa-search"></span></button>
-                            </div>
+                                <button type="submit" name="button"><span class="fa fa-search"></span></button>
+                            </form>
                         </div>
                         <div class="col-md-5 col-md-offset-3 col-sm-5 col-sm-offset-2">
                             <div class="shopping-cart">
                                 <select class="order" name="order">
-                                    <option value="01-01-2017">Narudzbina za 01.01.2017.</option>
-                                    <option value="01-02-2017">Narudzbina za 01.02.2017.</option>
-                                    <option value="01-03-2017">Narudzbina za 01.03.2017.</option>
-                                    <option value="01-04-2017">Narudzbina za 01.04.2017.</option>
-                                    <option value="01-05-2017">Narudzbina za 01.05.2017.</option>
+                                    <option value="01-01-2017">Narudžbina za 01.01.2017.</option>
+                                    <option value="01-02-2017">Narudžbina za 01.02.2017.</option>
+                                    <option value="01-03-2017">Narudžbina za 01.03.2017.</option>
+                                    <option value="01-04-2017">Narudžbina za 01.04.2017.</option>
+                                    <option value="01-05-2017">Narudžbina za 01.05.2017.</option>
                                 </select>
                                 <div class="visible-select">
-                                    <p class="custom-select">Narudzbina za 01.01.2017.</p>
+                                    <p class="custom-select">Narudžbina za 01.01.2017.</p>
                                     <ul class="select-dropdown list-unstyled">
-                                        <li data-value="01-01-2017">Narudzbina za 01.01.2017.</li>
-                                        <li data-value="01-02-2017">Narudzbina za 01.02.2017.</li>
-                                        <li data-value="01-03-2017">Narudzbina za 01.03.2017.</li>
-                                        <li data-value="01-04-2017">Narudzbina za 01.04.2017.</li>
-                                        <li data-value="01-05-2017">Narudzbina za 01.05.2017.</li>
+                                        <li data-value="01-01-2017">Narudžbina za 01.01.2017.</li>
+                                        <li data-value="01-02-2017">Narudžbina za 01.02.2017.</li>
+                                        <li data-value="01-03-2017">Narudžbina za 01.03.2017.</li>
+                                        <li data-value="01-04-2017">Narudžbina za 01.04.2017.</li>
+                                        <li data-value="01-05-2017">Narudžbina za 01.05.2017.</li>
                                     </ul>
                                 </div>
                                 <div class="buttons">
@@ -99,12 +99,12 @@
             </div><!-- container -->
         </nav>
         <main>
-            <section class="map">
+            <section class="map" style="background: #fffefa">
                 <div class="container">
                     <div id="map"></div>
                 </div>
             </section>
-            <section class="contact text-center">
+            <section class="contact text-center" style="background: #fffefa">
                 <h1 class="text-uppercase">kontakt</h1>
                 <ul class="contact-info list-unstyled">
                     <li>Arcadia Team d.o.o.</li>
@@ -148,7 +148,7 @@
                                     <p>Molimo Vas da uneste svoj e/mail i password</p>
                                     <input type="email" name="email" value="" class="form-control" placeholder="EMAIL*">
                                     <input type="password" name="password" value="" class="form-control" placeholder="PASSWORD*">
-                                    <p class="login-error error">*Email ili password netačni</p>
+                                    <p class="login-error error"></p>
                                     <div class="row">
                                         <div class="col-xs-6 text-left">
                                             <a href="#" class="forgotten-password">Zaboravili ste šifru?</a>
@@ -254,29 +254,28 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+
+        <!-- custom js and google maps function -->
         <script>
-            function initMap() {
-        var arcadia = {lat: 44.835992, lng: 20.361320999999975};
-        var mapCenter = {lat: 44.83474425520024, lng: 20.35974386109922};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15,
-          center: mapCenter
-        });
-        var marker = new google.maps.Marker({
-          position: arcadia,
-          map: map
-        });
-      }
+          function initMap() {
+            var arcadia = {lat: 44.835992, lng: 20.361320999999975};
+            var mapCenter = {lat: 44.83474425520024, lng: 20.35974386109922};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: mapCenter
+            });
+            var marker = new google.maps.Marker({
+              position: arcadia,
+              map: map
+            });
+          }
         </script>
-        <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4F1zDIhzA_yTroX-P21scgZ2DLG5TE0k&callback=initMap">
-    </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4F1zDIhzA_yTroX-P21scgZ2DLG5TE0k&callback=initMap"></script>
 
 
-        
+        <!-- core js -->
         <script src="js/validator.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
-

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    "use strict";
     // refactor paragraph to act as select
     $(".custom-select").click(function(e) {
         $(".select-dropdown").slideToggle();
@@ -34,7 +34,7 @@ $(document).ready(function() {
             icon.attr("src", hoverSource);
         }
         $(this).mouseleave(function() {
-            if (!$(this).hasClass("active-menu")) {
+            if (!$(this).hasClass("active-menu") && icon.attr("src").indexOf("hover") !== -1) {
                 icon.attr("src", orgSource);
             }
         });
@@ -85,6 +85,12 @@ $(document).ready(function() {
         $(".product-menu").slideToggle();
     });
 
+    // product filter form collapse
+    $(".filter-collapse").click(function() {
+        $(".filter").slideToggle(600);
+    });
+
+
     // product filter category collapse
     $(".category .sub-filter-collapse").click(function() {
         $(this).next().slideToggle();
@@ -104,20 +110,6 @@ $(document).ready(function() {
                 $(".price-range span:first").text(element.values[0] + "din");
                 $(".price-range span:last").text(element.values[1] + "din");
 
-            },
-            // product price filtering
-            stop: function(e, element) {
-                var products = $(".all-products .product");
-                for (var i = 0; i < products.length; i++) {
-                    var price = $(".all-products .product:eq(" + i + ")").attr("data-price");
-                    var dataId = $(".all-products .product:eq(" + i + ")").attr("data-id");
-                    price = parseInt(price);
-                    if (price < element.values[0] || price > element.values[1]) {
-                        $(".all-products .product:eq(" + i + ")").parent().fadeOut();
-                    } else {
-                        $(".all-products .product:eq(" + i + ")").parent().fadeIn();
-                    }
-                }
             }
 
         });
@@ -129,13 +121,14 @@ $(document).ready(function() {
     $("#slider .ui-slider-handle").append("span");
 
     // single product modal
-    function getIdentifiers() {
+    function getIdentifiers(location) {
         var identifiers = [];
-        $(".all-products .product").each(function() {
+        $(location + " .product").each(function() {
             if (typeof $(this).attr("data-id") !== typeof undefined && $(this).attr("data-id") !== false && $(this).is(":visible")) {
                 identifiers.push($(this).attr("data-id"));
             }
         });
+
         return identifiers;
     }
 
@@ -148,12 +141,29 @@ $(document).ready(function() {
         var newSrc = imageSrc.replace(".jpg", "-lg.jpg");
         var dataId = product.attr("data-id");
 
+        // var TotalPrice = product.find("div.product-price:not(.crossed) p:last").text();
+
         $(".single-product-modal .single-product").attr("data-id", dataId);
         $(".single-product-modal .product-id").html(productId);
         $(".single-product-modal div.product-price:first").html(productPriceOne);
         $(".single-product-modal div.product-price:last").html(productPriceTwo);
         $(".single-product-modal .product-name").text(productName);
         $(".single-product-modal img").attr("src", newSrc);
+
+        // $(".single-product-modal .total-price").text(TotalPrice);
+
+
+        // if (product.find("div.product-price:first").hasClass("crossed")) {
+        //     $(".single-product-modal div.product-price:first").addClass("crossed");
+        // } else {
+        //     $(".single-product-modal div.product-price:first").removeClass("crossed");
+        // }
+        //
+        // if (product.find("div.product-price:last").hasClass("crossed")) {
+        //     $(".single-product-modal div.product-price:last").addClass("crossed");
+        // } else {
+        //     $(".single-product-modal div.product-price:last").removeClass("crossed");
+        // }
     }
 
     $(".single-product-modal").on("show.bs.modal", function(e) {
@@ -164,7 +174,8 @@ $(document).ready(function() {
     });
 
     $(".product-left").click(function() {
-        var identifiers = getIdentifiers();
+        var location = "." + $(this).parents("section").attr("class");
+        var identifiers = getIdentifiers(location);
         var currentId = $(".single-product-modal .single-product").attr("data-id");
         var index = identifiers.findIndex(function(x) {
             return x === currentId;
@@ -178,14 +189,17 @@ $(document).ready(function() {
         }
 
         var prevId = identifiers[prevIndex];
-        var prevProduct = $(".all-products .product[data-id=" + prevId + "]");
+        var prevProduct = $(location + " .product[data-id=" + prevId + "]");
 
         setNewProduct(prevProduct);
+
 
     });
 
     $(".product-right").click(function() {
-        var identifiers = getIdentifiers();
+        var location = "." + $(this).parents("section").attr("class");
+        var identifiers = getIdentifiers(location);
+
         var currentId = $(".single-product-modal .single-product").attr("data-id");
         var index = identifiers.findIndex(function(x) {
             return x === currentId;
@@ -199,14 +213,34 @@ $(document).ready(function() {
         }
 
         var nextId = identifiers[nextIndex];
-        var nextProduct = $(".all-products .product[data-id=" + nextId + "]");
+        var nextProduct = $(location + " .product[data-id=" + nextId + "]");
 
         setNewProduct(nextProduct);
 
     });
 
-    // product category filtering
+    // fix modal-open class getting removed from body due to same button opening and closing modals
+    $(".login-modal").on("hide.bs.modal", function(e) {
+
+        if (!$(e.relatedTarget).is(".register-btn")) {
+            $("body").removeClass("modal-open");
+        }
+
+    });
+
+    $(".login-modal").on("show.bs.modal", function(e) {
+        $("body").addClass("modal-open");
+    });
+    $(".register-modal").on("hide.bs.modal", function(e) {
+        $("body").removeClass("modal-open");
+    });
+    $(".register-modal").on("show.bs.modal", function(e) {
+        $("body").addClass("modal-open");
+    });
 
 
-    
+
+
+
+
 });
